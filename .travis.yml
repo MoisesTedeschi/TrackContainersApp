@@ -10,7 +10,7 @@ install:
 
 script:
   - flake8 ebdjango
-  - pytest ebdjango --cov=ebdjango
+  - pytest --cov=./
 
 after_success:
   - codecov
