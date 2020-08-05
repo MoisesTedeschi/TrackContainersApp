@@ -7,7 +7,11 @@ python:
 
 install:
   - pip install -r requirements.txt
-  - pip install -r requirements-dev.txt
+  - pip install -r requirements-dev.txt codecov
 
 script:
   - flake8 ebdjango
+  - pytest ebdjango --cov=ebdjango
+
+after_success:
+  - codecov
