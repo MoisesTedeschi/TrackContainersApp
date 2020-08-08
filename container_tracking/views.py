@@ -7,6 +7,7 @@ from .carriers import is_valid_carrier, request_container_info
 from .models import Container
 from .mail import send_feedback_email
 
+
 def _update_container_data(container_number, data):
     if not data:
         return
