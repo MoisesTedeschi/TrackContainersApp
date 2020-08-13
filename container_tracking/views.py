@@ -43,16 +43,19 @@ def _need_update(containers):
 
 def results(request, container_number):
 
+    # Pesquisar se o número do container já está no banco.
     container = Container.objects.filter(number=container_number)
 
     need_request_new_data = _need_update(container)
 
     new_data = None
     if need_request_new_data:
+
         new_data = request_container_info(container_number)
         container = _update_container_data(container_number, new_data)
 
     if not container:
+        
         messages.error(request,
                        f"O container {container_number} não foi encontrado.")
 
