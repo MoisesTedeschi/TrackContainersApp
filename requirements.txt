@@ -14,7 +14,7 @@ py==1.9.0
 pycodestyle==2.6.0
 pyflakes==2.2.0
 pyparsing==2.4.7
-pytz==2023.3
+pytz==2023.4
 requests==2.24.0
 six==1.15.0
 sqlparse==0.3.1
